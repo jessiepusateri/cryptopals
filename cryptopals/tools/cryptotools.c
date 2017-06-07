@@ -12,9 +12,9 @@ int binval(char h) {
 }
 
 
-uint8_t * hextobin(uint8_t * hex) {
+char * hextobin(char * hex) {
 	size_t size = (strlen(hex) / 2) + 1;
-	uint8_t * bin = (uint8_t *)calloc(size + 1, sizeof(uint8_t));
+	char * bin = (char *)calloc(size + 1, sizeof(char));
 
 	int i = 0;
 	while (i < size) {
@@ -29,7 +29,7 @@ uint8_t * hextobin(uint8_t * hex) {
 }
 
 
-uint8_t * htob64(uint8_t * hex) {
+char * htob64(char * hex) {
 	
 	if (strlen(hex) % 2 != 0) { 
 		printf("Bad length.\n");
@@ -40,12 +40,13 @@ uint8_t * htob64(uint8_t * hex) {
 	size_t size = ((strlen(hex) * 2) + remainder) / 3;
 	size += remainder;
 
-	uint8_t * b64 = (uint8_t *)calloc(size+1, sizeof(uint8_t));
-	uint8_t * bin = hextobin(hex);
+	char * b64 = (char *)calloc(size+1, sizeof(char));
+	char * bin = hextobin(hex);
 
 	int i = 0; 
 	int j = 0;
 	uint32_t bits;
+	//skip last loop
 	for (j = 0; j < size-4; j += 4) {
 		bits = (bin[i] << 16) | (bin[i + 1] << 8) | bin[i + 2];
 	
@@ -73,6 +74,5 @@ uint8_t * htob64(uint8_t * hex) {
 		b64[j + 2] = vals[(bits >> 6) & 0x3f];
 		break; }
 	}
-
 	return b64;
 }
