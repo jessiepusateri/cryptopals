@@ -30,9 +30,15 @@
     <ClCompile Include="tools\cryptotools.c">
       <Filter>Header Files\tools</Filter>
     </ClCompile>
+    <ClCompile Include="hex.c">
+      <Filter>Header Files\tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tools\cryptolib.h">
+      <Filter>Header Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="hex.h">
       <Filter>Header Files\tools</Filter>
     </ClInclude>
   </ItemGroup>

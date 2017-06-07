@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
 const char vals[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
@@ -74,5 +75,6 @@ char * htob64(char * hex) {
 		b64[j + 2] = vals[(bits >> 6) & 0x3f];
 		break; }
 	}
+	free(bin);
 	return b64;
 }

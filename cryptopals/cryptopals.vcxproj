@@ -140,10 +140,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="hex.c" />
     <ClCompile Include="set_1\challenge_1\hextobase.c" />
     <ClCompile Include="tools\cryptotools.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="hex.h" />
     <ClInclude Include="tools\cryptolib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
