@@ -13,5 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\set_1">
+      <UniqueIdentifier>{1cef040d-83eb-4b2a-ace0-46522ae363b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\set_1\challenge_1">
+      <UniqueIdentifier>{0955c53f-eac7-401e-8ca2-30bec236261f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tools">
+      <UniqueIdentifier>{ddc42d23-ead4-4a66-8b35-15c89a5c1907}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="set_1\challenge_1\hextobase.c">
+      <Filter>Source Files\set_1\challenge_1</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\cryptotools.c">
+      <Filter>Header Files\tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tools\cryptolib.h">
+      <Filter>Header Files\tools</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
