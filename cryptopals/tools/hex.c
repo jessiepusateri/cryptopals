@@ -3,8 +3,6 @@
 #include <string.h>
 #include <stdio.h>
 
-//const char vals[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-
 //private
 int binary_value(char h) {
 	if (h >= '0' && h <= '9') return h - '0';

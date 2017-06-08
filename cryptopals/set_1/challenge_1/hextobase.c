@@ -1,8 +1,6 @@
-//#include "cryptolib.h"
 #include "hex.h"
 #include "b64.h"
 #include <stdio.h>
-#include <stdint.h>
 
 int main() {
 	char * example = "49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d";
