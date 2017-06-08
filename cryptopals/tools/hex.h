@@ -10,6 +10,7 @@ struct hex_struct {
 	char * hex_string;
 	int(*length)(hex);
 	char *(*hex_to_binary)(hex);
+	hex(*hex_xor)(hex, hex);
 };
 
 
@@ -17,3 +18,4 @@ struct hex_struct {
 hex newhex(char * hex_string);
 int getlength(hex self);
 char * htob(hex self);
+hex xor(hex self, hex rhs);

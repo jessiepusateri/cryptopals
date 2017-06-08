@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="set_1\challenge_1\hextobase.c" />
+    <ClCompile Include="set_1\challenge_2\fixedxor.c" />
     <ClCompile Include="tools\b64.c" />
     <ClCompile Include="tools\hex.c" />
   </ItemGroup>

@@ -22,16 +22,19 @@
     <Filter Include="Header Files\tools">
       <UniqueIdentifier>{ddc42d23-ead4-4a66-8b35-15c89a5c1907}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\set_1\challenge_2">
+      <UniqueIdentifier>{569ac8c0-84b4-41f1-a236-d72796dffbec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="set_1\challenge_1\hextobase.c">
-      <Filter>Source Files\set_1\challenge_1</Filter>
-    </ClCompile>
     <ClCompile Include="tools\hex.c">
       <Filter>Header Files\tools</Filter>
     </ClCompile>
     <ClCompile Include="tools\b64.c">
       <Filter>Header Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="set_1\challenge_2\fixedxor.c">
+      <Filter>Source Files\set_1\challenge_2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
