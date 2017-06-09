@@ -11,6 +11,9 @@ struct hex_struct {
 	int(*length)(hex);
 	char *(*hex_to_binary)(hex);
 	hex(*hex_xor)(hex, hex);
+	void(*new_string)(hex, char*);
+	char *(*key_decrypt)(hex, unsigned char);
+
 };
 
 
@@ -19,3 +22,12 @@ hex newhex(char * hex_string);
 int getlength(hex self);
 char * htob(hex self);
 hex xor(hex self, hex rhs);
+void new_s(hex self, char * hex_string);
+
+
+//ciph.c
+
+//void get_char_value(unsigned char c);
+//void check_keys(hex cipher);
+//void sort_keys();
+

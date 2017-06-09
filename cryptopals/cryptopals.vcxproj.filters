@@ -25,23 +25,26 @@
     <Filter Include="Source Files\set_1\challenge_2">
       <UniqueIdentifier>{569ac8c0-84b4-41f1-a236-d72796dffbec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\set_1\challenge_3">
+      <UniqueIdentifier>{603e8061-8616-41a7-9ff9-4b2c9287cb95}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tools\hex.c">
       <Filter>Header Files\tools</Filter>
     </ClCompile>
-    <ClCompile Include="tools\b64.c">
+    <ClCompile Include="tools\ciph.c">
       <Filter>Header Files\tools</Filter>
     </ClCompile>
-    <ClCompile Include="set_1\challenge_2\fixedxor.c">
-      <Filter>Source Files\set_1\challenge_2</Filter>
+    <ClCompile Include="set_1\challenge_3\xorcipher.c">
+      <Filter>Source Files\set_1\challenge_3</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tools\hex.h">
       <Filter>Header Files\tools</Filter>
     </ClInclude>
-    <ClInclude Include="tools\b64.h">
+    <ClInclude Include="tools\ciph.h">
       <Filter>Header Files\tools</Filter>
     </ClInclude>
   </ItemGroup>

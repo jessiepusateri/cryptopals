@@ -18,8 +18,9 @@ int hex_value(char b) {
 //public
 hex newhex(char * hex_string)
 {
-	if (strlen(hex_string) % 2 != 0) {
-		printf("Bad length, expect errors.\n");
+	int remainder = strlen(hex_string) % 2;
+	if (remainder) {
+		printf("Bytes not aligned, expect errors.\n");
 	}
 
 	hex self = malloc(sizeof(struct hex_struct));
@@ -28,6 +29,8 @@ hex newhex(char * hex_string)
 	self->length = &getlength;
 	self->hex_to_binary = &htob;
 	self->hex_xor = &xor;
+	self->new_string = &new_s;
+	//self->key_decrypt = &key_xor;
 
 	return self;
 }
@@ -54,6 +57,10 @@ char * htob(hex self) {
 	return bin;
 }
 
+void new_s(hex self, char * hex_string) {
+	free(self->hex_string);
+	self->hex_string = hex_string;
+}
 
 hex xor(hex self, hex rhs) {
 
@@ -71,3 +78,20 @@ hex xor(hex self, hex rhs) {
 	hex xor_hex = newhex(xored);
 	return xor_hex;
 }
+
+/*
+
+char * key_xor (hex self, unsigned char keyval) {
+
+	char * key_xored = calloc((self->length(self)/2) + 1, sizeof(char));
+	char * caesar = self->hex_to_binary(self);
+	int size = strlen(caesar);
+
+	for (int i = 0; i < size; i++) {
+		key_xored[i] = ((char)* caesar) ^ keyval;
+		caesar++;
+	}
+
+	return key_xored;
+}
+*/
