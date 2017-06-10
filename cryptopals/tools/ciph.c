@@ -59,28 +59,50 @@ void check_keys(char * en_value) {
 
 }
 
-void sort_keys(){
-	int change_occured = 1;
-	while (change_occured) {
-		change_occured = 0;
-		for (int i = 0; i < 255; i++) {
-			if (keys[i].key_val < keys[i + 1].key_val) {
-				key temp = keys[i];
-				keys[i] = keys[i + 1];
-				keys[i + 1] = temp;
-				change_occured = 1;
-			}
+void heapify(int n, int i) {
+	int looper = 1;
+	while (looper) {
+		looper = 0;
+		int largest = i; 
+		int l = 2 * i + 1;  
+		int r = 2 * i + 2;  
+
+		if (l < n && keys[l].key_val > keys[largest].key_val)
+			largest = l;
+
+		if (r < n && keys[r].key_val > keys[largest].key_val)
+			largest = r;
+
+		if (largest != i)
+		{
+			key temp_key = keys[i];
+			keys[i] = keys[largest];
+			keys[largest] = keys[i];
+
+			looper = 1;
 		}
 	}
-
 }
 
+//note: this isn't necessary, it would be easier to just save the location max value, however, I was messing
+//around with sorting algos
 
-/*
-void check_keys(hex cipher) {
-	const unsigned char initial_string = cipher->char
+void heap_sort_keys()
+{
+	int array_size = 256;
 
+	for (int i = array_size / 2 - 1; i >= 0; i--)
+		heapify(array_size, i);
+
+
+	for (int i = array_size - 1; i >= 0; i--)
+	{
+
+		key temp_key = keys[0];
+		keys[0] = keys[i];
+		keys[i] = temp_key;
+
+		heapify(i, 0);
+	}
 }
-void sort_keys() {}
 
-*/
