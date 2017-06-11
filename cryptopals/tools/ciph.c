@@ -77,7 +77,7 @@ void heapify(int n, int i) {
 		{
 			key temp_key = keys[i];
 			keys[i] = keys[largest];
-			keys[largest] = keys[i];
+			keys[largest] = temp_key;
 
 			looper = 1;
 		}

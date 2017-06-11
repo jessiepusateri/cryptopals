@@ -9,8 +9,8 @@ int main() {
 	check_keys(base->hex_to_binary(base));
 	
 	heap_sort_keys();
-	char * decoded = key_decrypt(base->hex_to_binary(base), keys[0].key_bits);
-	printf("The most likely key (in decimal) was: %d\n", keys[0].key_bits);
+	char * decoded = key_decrypt(base->hex_to_binary(base), keys[255].key_bits);
+	printf("The most likely key (in decimal) was: %d\n", keys[255].key_bits);
 	printf("The output for this key is: %s\n", decoded); 
 
 

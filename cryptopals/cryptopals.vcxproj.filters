@@ -28,6 +28,9 @@
     <Filter Include="Source Files\set_1\challenge_3">
       <UniqueIdentifier>{603e8061-8616-41a7-9ff9-4b2c9287cb95}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\set_1\challenge_4">
+      <UniqueIdentifier>{20160656-2b51-45eb-93d6-bc96c73ae700}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tools\hex.c">
@@ -36,8 +39,8 @@
     <ClCompile Include="tools\ciph.c">
       <Filter>Header Files\tools</Filter>
     </ClCompile>
-    <ClCompile Include="set_1\challenge_3\xorcipher.c">
-      <Filter>Source Files\set_1\challenge_3</Filter>
+    <ClCompile Include="set_1\challenge_4\findxorcipher.c">
+      <Filter>Source Files\set_1\challenge_4</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

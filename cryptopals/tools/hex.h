@@ -25,9 +25,3 @@ hex xor(hex self, hex rhs);
 void new_s(hex self, char * hex_string);
 
 
-//ciph.c
-
-//void get_char_value(unsigned char c);
-//void check_keys(hex cipher);
-//void sort_keys();
-

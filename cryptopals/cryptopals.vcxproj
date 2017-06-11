@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="set_1\challenge_3\xorcipher.c" />
+    <ClCompile Include="set_1\challenge_4\findxorcipher.c" />
     <ClCompile Include="tools\ciph.c" />
     <ClCompile Include="tools\hex.c" />
   </ItemGroup>
