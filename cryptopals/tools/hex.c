@@ -3,6 +3,10 @@
 #include <string.h>
 #include <stdio.h>
 
+
+//start of hex class
+
+
 //private
 int binary_value(char h) {
 	if (h >= '0' && h <= '9') return h - '0';
@@ -11,8 +15,8 @@ int binary_value(char h) {
 }
 
 int hex_value(char b) {
-	if (b >= 0x0 && b <= 0x9) return b + '0';
-	if (b >= 0xa && b <= 0xf) return b + 'a';
+	if (b >= 0x0 && b <= 0x9) { return b + '0'; }
+	if (b >= 0xa && b <= 0xf) { return b + 'a' - 0xa; }
 	else { return 0; }
 }
 //public
@@ -79,19 +83,40 @@ hex xor(hex self, hex rhs) {
 	return xor_hex;
 }
 
-/*
 
-char * key_xor (hex self, unsigned char keyval) {
+//end of hex class
 
-	char * key_xored = calloc((self->length(self)/2) + 1, sizeof(char));
-	char * caesar = self->hex_to_binary(self);
-	int size = strlen(caesar);
+//outside of hex class
 
-	for (int i = 0; i < size; i++) {
-		key_xored[i] = ((char)* caesar) ^ keyval;
-		caesar++;
+char * rolling_key_encryption(char * input, char * xor_key) {
+
+	size_t size = strlen(input);
+	char * a = input;
+
+	char * hexed = (char *)calloc(2 * size + 1, sizeof(char));
+
+	int key_length = strlen(xor_key);
+	int key_loc = 0;
+
+	for (int i = 0; i < 2 * size; i += 2) {
+		char character = ((char)* a) ^ xor_key[key_loc];
+		hexed[i] = hex_value(character >> 4);
+		hexed[i + 1] = hex_value(character & 0x0f);
+		a++;
+		key_loc = (key_loc + 1) % key_length;
 	}
-
-	return key_xored;
+	return hexed;
 }
-*/
+
+char * characters_to_hex(char * characters) {
+	
+	char * hexed = (char *)calloc(2 * strlen(characters) + 1, sizeof(char));
+	int place = 0;
+	
+	for (int i = 0; i < 2 * strlen(characters); i+=2) {
+		hexed[i] = hex_value(characters[place] >> 4);
+		hexed[i+1] = hex_value(characters[place] & 0x0f);
+		place++;
+	} 
+	return hexed;
+}

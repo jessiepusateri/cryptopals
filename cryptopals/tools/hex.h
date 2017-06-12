@@ -25,3 +25,6 @@ hex xor(hex self, hex rhs);
 void new_s(hex self, char * hex_string);
 
 
+//outside of hex class
+char * rolling_key_encryption(char * input, char * xor_key);
+char * characters_to_hex(char * characters);
