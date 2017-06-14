@@ -32,7 +32,7 @@ hex newhex(char * hex_string)
 	self->hex_string = hex_string;
 	self->length = &getlength;
 	self->hex_to_binary = &htob;
-	self->hex_xor = &xor;
+	//self->hex_xor = &xor;
 	self->new_string = &new_s;
 	//self->key_decrypt = &key_xor;
 
@@ -46,7 +46,7 @@ int getlength(hex self) {
 char * htob(hex self) {
 	size_t size = self->length(self);
 	size = (size / 2) + 1;
-	char * bin = calloc(size + 1, sizeof(char));
+	char * bin = calloc(size, sizeof(char));
 	unsigned int i = 0;
 	//pointer here will be the issue if there is another error
 	char * j = self->hex_string;
@@ -65,7 +65,7 @@ void new_s(hex self, char * hex_string) {
 	free(self->hex_string);
 	self->hex_string = hex_string;
 }
-
+/*
 hex xor(hex self, hex rhs) {
 
 	char * xored = calloc(self->length(self) + 1, sizeof(char));
@@ -82,12 +82,12 @@ hex xor(hex self, hex rhs) {
 	hex xor_hex = newhex(xored);
 	return xor_hex;
 }
-
+*/
 
 //end of hex class
 
 //outside of hex class
-
+/*
 char * rolling_key_encryption(char * input, char * xor_key) {
 
 	size_t size = strlen(input);
@@ -107,7 +107,7 @@ char * rolling_key_encryption(char * input, char * xor_key) {
 	}
 	return hexed;
 }
-
+*/
 char * characters_to_hex(char * characters) {
 	
 	char * hexed = (char *)calloc(2 * strlen(characters) + 1, sizeof(char));

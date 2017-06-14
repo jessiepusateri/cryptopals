@@ -141,10 +141,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="set_1\challenge_5\repeating_xor.c" />
+    <ClCompile Include="tools\b64.c" />
+    <ClCompile Include="tools\char_table.c" />
     <ClCompile Include="tools\ciph.c" />
     <ClCompile Include="tools\hex.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="tools\b64.h" />
     <ClInclude Include="tools\ciph.h" />
     <ClInclude Include="tools\hex.h" />
   </ItemGroup>

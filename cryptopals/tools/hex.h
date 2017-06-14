@@ -10,7 +10,7 @@ struct hex_struct {
 	char * hex_string;
 	int(*length)(hex);
 	char *(*hex_to_binary)(hex);
-	hex(*hex_xor)(hex, hex);
+	//hex(*hex_xor)(hex, hex);
 	void(*new_string)(hex, char*);
 	char *(*key_decrypt)(hex, unsigned char);
 
@@ -21,10 +21,10 @@ struct hex_struct {
 hex newhex(char * hex_string);
 int getlength(hex self);
 char * htob(hex self);
-hex xor(hex self, hex rhs);
+//hex xor(hex self, hex rhs);
 void new_s(hex self, char * hex_string);
 
 
 //outside of hex class
-char * rolling_key_encryption(char * input, char * xor_key);
+//char * rolling_key_encryption(char * input, char * xor_key);
 char * characters_to_hex(char * characters);
