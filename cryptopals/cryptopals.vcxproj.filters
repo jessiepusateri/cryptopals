@@ -37,6 +37,9 @@
     <Filter Include="Source Files\set_1\challenge_6">
       <UniqueIdentifier>{682d35c1-7b0d-455d-9450-7cb099c446bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\set_1\challenge_7">
+      <UniqueIdentifier>{56be66aa-fafa-47d3-99bc-d3d3520ca937}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tools\hex.c">
@@ -51,8 +54,8 @@
     <ClCompile Include="tools\char_table.c">
       <Filter>Header Files\tools</Filter>
     </ClCompile>
-    <ClCompile Include="set_1\challenge_5\repeating_xor.c">
-      <Filter>Source Files\set_1\challenge_5</Filter>
+    <ClCompile Include="set_1\challenge_7\aes_ecb_decrypt.c">
+      <Filter>Source Files\set_1\challenge_7</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

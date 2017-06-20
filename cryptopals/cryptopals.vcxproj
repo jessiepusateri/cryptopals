@@ -72,15 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Kellen\Documents\Visual Studio 2017\Projects\openssl64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Kellen\Documents\Visual Studio 2017\Projects\openssl64\debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Kellen\Documents\Visual Studio 2017\Projects\openssl64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Kellen\Documents\Visual Studio 2017\Projects\openssl64\debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Kellen\Documents\Visual Studio 2017\Projects\openssl64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Kellen\Documents\Visual Studio 2017\Projects\openssl64\release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\Kellen\Documents\Visual Studio 2017\Projects\openssl64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Kellen\Documents\Visual Studio 2017\Projects\openssl64\release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -89,10 +97,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Kellen\Documents\Visual Studio 2017\Projects\cryptopals\cryptopals\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Kellen\Documents\Visual Studio 2017\Projects\cryptopals\cryptopals\tools;C:\Users\Kellen\Documents\Visual Studio 2017\Backup Files\tiny-AES128-C;C:\Users\Kellen\Documents\Visual Studio 2017\Projects\cryptopals\cryptopals\third_party_tools\tiny-AES128-C;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -105,6 +114,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -121,6 +131,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -137,10 +148,11 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="set_1\challenge_5\repeating_xor.c" />
+    <ClCompile Include="set_1\challenge_7\aes_ecb_decrypt.c" />
     <ClCompile Include="tools\b64.c" />
     <ClCompile Include="tools\char_table.c" />
     <ClCompile Include="tools\ciph.c" />

@@ -29,8 +29,8 @@ int main() {
 		*b64pointer = ch;
 		b64pointer++;
 	}
-	char * bin_val = base64_to_binary(b64text);
-	int binsize = ((filesize * 3) + (filesize % 4)) / 4;
+	int binsize = return_bin_size(filesize);
+	char * bin_val = base64_to_binary(b64text, binsize);
 
 	int key_size = get_key_size(bin_val, binsize);
 	char * xor_key = get_key(bin_val, key_size, binsize);
